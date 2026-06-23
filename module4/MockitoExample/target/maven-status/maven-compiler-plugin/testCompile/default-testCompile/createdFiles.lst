@@ -1,0 +1,7 @@
+com\example\MyServiceArgumentMatcherTest.class
+com\example\MyServiceVoidTest.class
+com\example\MyServiceOrderTest.class
+com\example\MyServiceTest.class
+com\example\MyServiceMultipleReturnTest.class
+com\example\MyServiceVoidExceptionTest.class
+com\example\MyServiceVerifyTest.class

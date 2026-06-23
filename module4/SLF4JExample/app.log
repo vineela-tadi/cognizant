@@ -1,0 +1,4 @@
+21:19:08.110 [com.example.AppenderExample.main()] DEBUG com.example.AppenderExample - This is a DEBUG message
+21:19:08.111 [com.example.AppenderExample.main()] INFO  com.example.AppenderExample - This is an INFO message
+21:19:08.112 [com.example.AppenderExample.main()] WARN  com.example.AppenderExample - This is a WARN message
+21:19:08.112 [com.example.AppenderExample.main()] ERROR com.example.AppenderExample - This is an ERROR message
