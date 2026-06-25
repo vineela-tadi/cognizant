@@ -1,0 +1,31 @@
+//Scenario 1: ProcessMonthlyInterest
+//Savings Accounts Table
+CREATE TABLE SAVINGS_ACCOUNTS (
+    ACCOUNT_ID NUMBER PRIMARY KEY,
+    BALANCE NUMBER
+);
+
+INSERT INTO SAVINGS_ACCOUNTS VALUES (1,10000);  
+INSERT INTO SAVINGS_ACCOUNTS VALUES (2,20000); 
+
+COMMIT;
+
+// Procedure
+CREATE OR REPLACE PROCEDURE ProcessMonthlyInterest
+IS
+BEGIN
+    UPDATE SAVINGS_ACCOUNTS
+    SET BALANCE = BALANCE + (BALANCE * 0.01);
+
+    COMMIT;
+
+    DBMS_OUTPUT.PUT_LINE(
+        'Monthly Interest Applied Successfully'
+    );
+END;
+/
+
+//Execute
+EXEC ProcessMonthlyInterest;
+
+SELECT * FROM SAVINGS_ACCOUNTS;

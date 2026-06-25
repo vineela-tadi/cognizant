@@ -1,0 +1,28 @@
+SET SERVEROUTPUT ON;
+
+BEGIN
+   FOR c IN (
+      SELECT CUSTOMER_ID, BALANCE
+      FROM CUSTOMERS
+   )
+   LOOP
+      IF c.BALANCE > 10000 THEN
+         UPDATE CUSTOMERS
+         SET ISVIP = 'TRUE'
+         WHERE CUSTOMER_ID = c.CUSTOMER_ID;
+
+         DBMS_OUTPUT.PUT_LINE(
+            'VIP status granted to Customer ID: ' || c.CUSTOMER_ID
+         );
+      ELSE
+         UPDATE CUSTOMERS
+         SET ISVIP = 'FALSE'
+         WHERE CUSTOMER_ID = c.CUSTOMER_ID;
+      END IF;
+   END LOOP;
+
+   COMMIT;
+END;
+/
+SELECT CUSTOMER_ID, ISVIP
+FROM CUSTOMERS;
