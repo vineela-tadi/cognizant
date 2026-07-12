@@ -1,0 +1,18 @@
+.box {
+    width: 500px;
+    margin: 40px auto;
+    padding: 20px;
+    border: 2px solid #4CAF50;
+    border-radius: 10px;
+    background-color: #f4fff4;
+    text-align: center;
+    font-family: Arial;
+}
+
+h2 {
+    color: green;
+}
+
+h3 {
+    color: blue;
+}
