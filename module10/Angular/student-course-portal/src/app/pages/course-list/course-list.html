@@ -1,0 +1,42 @@
+<p *ngIf="isLoading">
+  Loading courses...
+</p>
+
+<div *ngIf="!isLoading">
+
+  <!-- Search Box -->
+  <input
+    type="text"
+    [(ngModel)]="searchTerm"
+    (input)="searchCourses()"
+    placeholder="Search Course"
+  />
+
+  <br><br>
+
+  <p>
+    Searching for: <b>{{ searchTerm }}</b>
+  </p>
+
+  <div *ngIf="courses.length > 0; else noCourses">
+
+    <h2>Course List</h2>
+
+    <app-course-card
+      *ngFor="let c of courses; trackBy: trackByCourseId"
+      [course]="c"
+      (enrollRequested)="onEnroll($event)"
+      appHighlight="lightblue">
+    </app-course-card>
+
+  </div>
+
+  <ng-template #noCourses>
+    <p>No courses available.</p>
+  </ng-template>
+
+  <p *ngIf="selectedCourseId">
+    Selected Course ID: {{ selectedCourseId }}
+  </p>
+
+</div>

@@ -1,0 +1,29 @@
+1. angular.json
+This file contains the Angular project configuration such as build settings, assets, styles and scripts.
+
+2. tsconfig.json
+This is the main TypeScript configuration file.
+
+3. tsconfig.app.json
+This file contains TypeScript settings for the Angular application.
+
+4. package.json
+This file contains project information, dependencies and npm scripts.
+
+5. src/main.ts
+This is the entry point of the Angular application. It starts the application.
+
+6. src/app/app.config.ts
+This file contains application-wide configuration such as providers and routing.
+
+7. src/app/app.ts (or app.component.ts if present)
+This is the root component of the Angular application.
+
+8. src/index.html
+This is the main HTML page where the Angular application is loaded.
+
+maximumWarning:
+Shows a warning if the application bundle size exceeds the specified limit.
+
+maximumError:
+Stops the build if the application bundle size exceeds the specified limit.
